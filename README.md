@@ -17,3 +17,4 @@ This repo is based on a tutorial from [freeCodeCamp.org](https://www.youtube.com
 | Code    |              |             |
 | Speed   |              |             |
 | Subproblem solving   |              |             | 
+| Table Entries   |              |             |
