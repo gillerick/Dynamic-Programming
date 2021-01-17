@@ -5,3 +5,6 @@ Dynamic programming is an algorithm technique for solving an optimization proble
 # Examples included in the repo
 1. Fibonacci numbers
 2. Grid Traversal problem
+3. Target Sum Problem
+4. Array of Target Sum Problem
+5. Best Sum Problem
