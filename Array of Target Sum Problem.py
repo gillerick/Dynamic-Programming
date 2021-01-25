@@ -1,17 +1,19 @@
-def howSum(targetSum, numbers):
-    T = []
+def howSum(targetSum, numbers, memo={}):
+    if targetSum in memo:
+        return targetSum[memo]
     if targetSum == 0:
         return []
     if targetSum < 0:
         return None
     for num in numbers:
         remainder = targetSum - num
-        remainderResult = howSum(remainder, numbers)
-        if remainderResult != None:
-            # Spread operator in Python
-            T = [*remainderResult, num]
-            return T
-    return None
+        if howSum(remainder, numbers, memo):
+            memo[targetSum] = True
+            return True
+        # if remainderResult != None:
+        #     T = [*remainderResult, num]
+    return False
+
 
 
 print(howSum(7, [2, 3]))

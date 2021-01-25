@@ -1,0 +1,47 @@
+#!/bin/python3
+
+import math
+import os
+import random
+import re
+import sys
+
+
+
+#
+# Complete the 'isPossible' function below.
+#
+# The function is expected to return a BOOLEAN.
+# The function accepts following parameters:
+#  1. INTEGER_ARRAY calCounts
+#  2. INTEGER requiredCals
+#
+
+def isPossible(calCounts, requiredCals):
+    if requiredCals == 0:
+        return True
+    if requiredCals < 0:
+        return False
+    for cal in calCounts:
+        remainder = requiredCals - cal
+        if isPossible(remainder, calCounts):
+            return True
+
+if __name__ == '__main__':
+    fptr = open(os.environ['OUTPUT_PATH'], 'w')
+
+    calCounts_count = int(input().strip())
+
+    calCounts = []
+
+    for _ in range(calCounts_count):
+        calCounts_item = int(input().strip())
+        calCounts.append(calCounts_item)
+
+    requiredCals = int(input().strip())
+
+    result = isPossible(calCounts, requiredCals)
+
+    fptr.write(str(int(result)) + '\n')
+
+    fptr.close()

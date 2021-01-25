@@ -12,4 +12,4 @@ def canConstruct(target, wordBank):
             pass
     return False
 
-print(canConstruct("abucdef", ["ab", "abc", "cd", "def", "abcd"]))
+print(canConstruct("abcdef", ["ab", "abc", "cd", "def", "abcd"]))
